@@ -1,0 +1,35 @@
+@import "components/fonts";
+@import "components/vars";
+@import "components/layout";
+@import "components/typography";
+@import "components/assist";
+@import "icons";
+
+// Header
+@import "components/header/header";
+@import "components/header/top-nav";
+@import "components/header/user-nav";
+
+// Sections
+@import "components/sections/find-by-model-section";
+@import "components/sections/big-slider-section";
+@import "components/sections/categories-section";
+@import "components/sections/promo-section";
+@import "components/sections/features-section";
+@import "components/sections/about-section";
+@import "components/sections/news-section";
+@import "components/sections/advantages-section";
+@import "components/sections/delivery-page";
+@import "components/sections/error-page-section";
+
+// Footer
+@import "components/footer/footer";
+
+// Common
+@import "components/common/buttons";
+@import "components/common/forms";
+@import "components/common/panel";
+@import "components/common/search-block";
+@import "components/common/tabs-nav";
+@import "components/common/video-block";
+@import "components/common/socials-list";

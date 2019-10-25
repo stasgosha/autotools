@@ -1,0 +1,35 @@
+.about-section{
+	padding-bottom: 45px;
+
+	.section-inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.section-video,
+		.section-content{
+			width: calc(50% - 15px);
+		}
+
+		.section-content{
+			padding-right: 50px;
+		}
+
+		@media screen and (max-width: 991px){
+			flex-direction: column;
+
+			.section-video,
+			.section-content{
+				width: 100%;
+			}
+
+			.section-video{
+				margin-bottom: 40px;
+			}
+
+			.section-content{
+				padding-right: 0;
+			}
+		}
+	}
+}

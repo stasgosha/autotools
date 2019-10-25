@@ -1,0 +1,26 @@
+.error-page-section{
+	padding: 100px 0;
+
+	.section-inner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		.section-image{
+			margin-bottom: 40px;
+
+			img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+
+		.section-content{
+			.btn{
+				max-width: 240px;
+			}
+		}
+	}
+}

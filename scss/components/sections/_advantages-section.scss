@@ -1,0 +1,31 @@
+.advantages-section{
+	background: $primary;
+	padding: 30px 0;
+	color: #fff;
+}
+
+.advantage-card{
+	display: flex;
+
+	.card-icon{
+		width: 60px;
+		flex: none;
+		border-radius: 50%;
+		margin-right: 15px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.card-content{
+		padding-top: 10px;
+
+		.card-caption{
+			font-weight: bold;
+			margin-bottom: 18px;
+		}
+	}
+}

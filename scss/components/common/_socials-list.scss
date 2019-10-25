@@ -1,0 +1,29 @@
+.socials-list{
+	display: flex;
+	margin-bottom: 25px;
+
+	li{
+		margin-right: 10px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		a{
+			width: 40px;
+			transition: all $t;
+			display: block;
+
+			img{
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+			}
+
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+}

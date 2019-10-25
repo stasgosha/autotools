@@ -1,0 +1,34 @@
+.categories-section{
+	padding-bottom: 30px;
+}
+
+.category-card{
+	height: 100%;
+	display: flex;
+	position: relative;
+	border: 1px solid $border-color;
+	transition: all $t;
+	padding: 15px 20px 20px;
+	color: $text-color;
+	min-height: 160px;
+
+	.card-name{
+		font-weight: bold;
+	}
+
+	.card-image{
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		filter: grayscale(1);
+		transition: all $t;
+	}
+
+	&:hover{
+		background: #ebebeb;
+
+		.card-image{
+			filter: grayscale(0);
+		}
+	}
+}

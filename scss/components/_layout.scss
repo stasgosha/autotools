@@ -1,0 +1,336 @@
+$section-padding: 80px;
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0;
+}
+
+html{
+	font-size: 15px;
+	line-height: 24px;
+}
+
+body{
+	color: $text-color;
+	font-family: $main-font;
+	background: $body-bg;
+}
+
+a, button{
+	text-decoration: none;
+	transition: all $t;
+	outline: none !important;
+	border: none;
+}
+
+a img{
+	outline: none !important;
+	border: none !important;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+.wrapper{
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 105px;
+
+	.page{
+		flex: auto;
+	}
+
+	.footer{
+		flex: none;
+	}
+
+	@media screen and (max-width: 991px){
+		padding-top: 101px;
+	}
+
+	@media screen and (max-width: 575px){
+		padding-top: 50px;
+	}
+}
+
+.container{
+	width: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+
+	@media screen and (min-width: 576px){
+		max-width: 540px;
+		padding: 0 20px;
+	}
+
+	@media screen and (min-width: 768px){
+		max-width: 720px;
+	}
+
+	@media screen and (min-width: 992px){
+		max-width: 960px;
+	}
+
+	@media screen and (min-width: 1250px){
+		max-width: 1230px;
+	}
+
+	@media screen and (min-width: 1400px){
+		// max-width: 1370px;
+	}
+
+	@media screen and (min-width: 1700px){
+		// max-width: 1670px;
+	}
+}
+
+.modal{
+	.modal-content{
+		border-radius: 0;
+		border: 0;
+
+		.modal-body{
+			padding: 30px 35px 20px;
+		}
+	}
+
+	.modal-dialog{
+		margin-top: 60px;
+		max-width: 645px;
+
+		@media screen and (max-width: 767px){
+			width: calc(100% - 30px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.modal-caption{
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.modal-close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 5;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+
+		&:before,
+		&:after{
+			content: '';
+			display: block;
+			width: 20px;
+			height: 2px;
+			background: #333;
+			position: absolute;
+			left: calc(50% - 10px);
+			top: calc(50% - 1px);
+			transition: all $t;
+		}
+
+		&:before{
+			transform: rotate(45deg);
+		}
+
+		&:after{
+			transform: rotate(-45deg);
+		}
+
+		&:hover{
+			&:before,
+			&:after{
+				background: $accent;
+			}
+		}
+	}
+
+	&.narrow{
+		.modal-dialog{
+			max-width: 340px;
+		}
+	}
+
+	.success-block{
+		padding: 15px 0 25px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		.block-image{
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.cards-list{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: -30px;
+
+	> .item{
+		padding: 0 15px;
+		margin-bottom: 30px;
+	}
+
+	&.columns-5{
+		> .item{
+			width: 20%;
+		}
+	}
+
+	&.columns-4{
+		> .item{
+			width: 25%;
+		}
+	}
+
+	&.columns-3{
+		> .item{
+			width: 33.3333%;
+		}
+	}
+
+	&.columns-2{
+		> .item{
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		&.lg-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.lg-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.lg-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		&.md-columns-3{
+			> .item{
+				width: 33.333%;
+			}
+		}
+
+		&.md-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.md-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		&.sm-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.sm-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		&.xs-columns-2{
+			> .item{
+				width: 50%;
+			}
+		}
+
+		&.xs-columns-1{
+			> .item{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.slick-slider{
+	.slide{
+		outline: none !important;
+	}
+}
+
+.slider-pagination{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	display: flex;
+	z-index: 20;
+
+	.slick-arrow{
+		position: static;
+		transform: none;
+		width: 34px;
+		height: 29px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:before{
+			opacity: 1;
+			display: block;
+			width: 14px;
+			height: 9px;
+			background: url(../img/icons/slider-arrows.png) no-repeat;
+			content: '';
+			transition: all $t;
+		}
+
+		&.slick-prev{
+			&:before{
+				background-position: left center;
+			}
+		}
+
+		&.slick-next{
+			&:before{
+				background-position: right center;
+			}
+		}
+
+		&:hover{
+			&:before{
+				transform: scale(1.2);
+			}
+		}
+	}
+}

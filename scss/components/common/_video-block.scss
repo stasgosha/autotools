@@ -1,0 +1,41 @@
+.video-block{
+	width: 100%;
+	position: relative;
+
+	.block-preview{
+		position: relative;
+		z-index: 2;
+		cursor: pointer;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 78px;
+			height: 79px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			background: url(../img/icons/play.png) no-repeat center center;
+			transform: translate(-50%, -50%);
+			transition: all $t;
+		}
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		&:hover{
+			&:before{
+				transform: translate(-50%, -50%) scale(1.1);
+			}
+		}
+	}
+
+	.block-iframe{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}

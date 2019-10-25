@@ -1,0 +1,106 @@
+.news-section{
+	padding-bottom: 20px;
+
+	.section-header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+
+		.sh-block{
+			padding: 0 20px;
+		}
+
+		a{
+			color: $text-color;
+
+			&:hover{
+				color: $orange;
+			}
+		}
+
+		@media screen and (max-width: 575px){
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 0;
+			width: calc(100% + 40px);
+			margin-left: -20px;
+			margin-right: -20px;
+
+			.sh-block{
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.news-card{
+	display: block;
+	color: $text-color;
+
+	.card-image{
+		height: 185px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+
+		.image{
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			transition: all $t;
+		}
+	}
+
+	.card-content{
+		padding: 20px;
+		position: relative;
+
+		.card-date{
+			position: absolute;
+			top: -12px;
+			font-size: 13px;
+			line-height: 24px;
+			color: #fff;
+			padding: 0 15px;
+			z-index: 2;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				transform: skewX(-20deg);
+				background: $accent;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: -1;
+			}
+		}
+
+		.card-caption{
+			font-weight: bold;
+			margin-bottom: 12px;
+			transition: all $t;
+		}
+
+		p{
+			font-size: 13px;
+		}
+	}
+
+	&:hover{
+		.card-image{
+			.image{
+				transform: scale(1.1);
+			}
+		}
+
+		.card-content{
+			.card-caption{
+				color: $accent;
+			}
+		}
+	}
+}

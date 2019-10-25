@@ -1,0 +1,50 @@
+.search-block{
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	position: relative;
+	z-index: 20;
+
+	.block-icon{
+		background: $accent;
+		height: 50px;
+		width: 70px;
+		transform: skewX(-20deg);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 30px;
+		flex: none;
+
+		i{
+			transform: skewX(20deg);
+		}
+	}
+
+	.block-text{
+		font-weight: bold;
+		transition: all $t;
+	}
+
+	&:hover{
+		.block-text{
+			color: $accent;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.block-text{
+			display: none;
+		}
+
+		.block-icon{
+			margin-right: 0;
+		}
+	}
+
+	@media screen and (max-width: 359px){
+		.block-icon{
+			width: 50px;
+		}
+	}
+}
